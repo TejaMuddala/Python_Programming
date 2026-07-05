@@ -1,0 +1,16 @@
+def count_unique_digit_numbers(n1,n2):
+  count = 0
+  for num in range(n1,n2+1):
+    s = str(num)
+    if len(s) == len(set(s)):
+      count +=1
+  return count
+n1 = int(input())
+n2 = int(input())
+result = count_unique_digit_numbers(n1,n2)
+print(result)
+
+
+
+#Input : 11 15
+#Output : 4
