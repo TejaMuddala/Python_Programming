@@ -1,0 +1,20 @@
+def solvemove_multiples_of_ten(n,arr):
+
+  multiples = []
+  non_multiples = []
+
+  for num in arr:
+    if num % 10 != 0:
+      non_multiples.append(num)
+
+  for num in arr:
+    if num % 10 == 0:
+      multiples.append(num)
+
+  result = non_multiples + multiples
+  return result
+
+n = int(input())
+arr = list(map(int,input().split()))
+result = solvemove_multiples_of_ten(n,arr)
+print(*result)
