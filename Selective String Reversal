@@ -1,0 +1,23 @@
+def reverse_letters_only(s):
+
+  arr = list(s)
+
+  left = 0
+  right = len(arr) - 1
+
+  while left < right:
+
+    if arr[left].isdigit():
+      left += 1
+
+    elif arr[right].isdigit():
+      right -= 1
+
+    else:
+      arr[left],arr[right] = arr[right],arr[left]
+      left += 1
+      right -= 1
+  return "".join(arr)
+
+s = input()
+print(reverse_letters_only(s))
