@@ -1,0 +1,16 @@
+# program that reads stdin and writes stdout
+import sys
+
+n = int(input())
+
+arr = list(map(int,input().split()))
+
+arr.sort()
+
+mid = (n+1)//2
+
+for i in range(mid):
+    print(arr[i],end = " ")
+
+for i in range(n - 1, mid -1, -1):
+    print(arr[i],end = " ")
