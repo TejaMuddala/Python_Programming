@@ -1,0 +1,19 @@
+# program that reads stdin and writes stdout
+import sys
+
+n,target = list(map(int,input().split()))
+arr = list(map(int,input().split()))
+
+left = 0
+right = n - 1
+
+while left < right:
+	currentSum = arr[left] + arr[right]
+
+	if currentSum == target:
+		print(*(left + 1,right + 1))
+		break
+	elif currentSum < target:
+		left += 1
+	else:
+		right -= 1
