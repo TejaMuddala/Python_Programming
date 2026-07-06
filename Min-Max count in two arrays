@@ -1,0 +1,19 @@
+import sys
+
+len1,len2 = list(map(int,input().split()))
+
+arr1 = list(map(int,input().split()))
+arr2 = list(map(int,input().split()))
+
+k = int(input())
+
+x = 0
+y = 0
+
+for num in arr1:
+	if num > k:
+		x += 1
+for num in arr2:
+	if num < k:
+		y +=1
+print(max(x,y))
